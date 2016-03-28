@@ -19,7 +19,7 @@
 
 \geometry{a4paper,left=3cm,right=2cm,bottom=3.5cm,top=2cm, headsep=1cm, footskip=1.5cm}
 
-\title{Lista de Exercícios #1}
+\title{Lista de Exercícios 1}
 \author{Guilmour Rossi}
 \date{Março, 2016}
 
@@ -245,6 +245,64 @@
 \\3.3 \tab \tab[0.76cm] $= (k+1)^2(\frac{k^2}{4} + k + 1)$.
 \\3.4 \tab \tab[0.76cm] $= (k+1)^2(\frac{k^2+4k+4}{4})$.
 \\3.5 \tab \tab[0.76cm] $= \boxed{\frac{(k+1)^2 \cdot (k+2)^2}{4}}$.}
+
+
+\pagebreak
+\textbf{III) Resolva as relações de recorrência: \\}
+\vskip5mm
+\textbf{\textbf{\texttt{A)}} S(1) = 1 \tab S(n) = S(n - 1) + 2n - 1 para n $\geq$ 2.\\}
+\textsf{1. Expandir: $S(2) = S(1) + 2 \cdot (2) - 1 = 4 = 2^2$. 
+\\ \tab 1.1. \tab[0.37cm] $S(3) = S(2) + 2 \cdot (3) - 1 = 4 + 5 = 9 = 3^2$.
+\\ \tab 1.2. \tab[0.37cm] $S(4) = S(3) + 2 \cdot (4) - 1 = 9 + 7 = 16 = 4^2$.
+\\ \tab 1.3. \tab[0.37cm] $S(5) = S(4) + 2 \cdot (5) - 1 = 16 + 9 = 25 = 5^2$.
+\\2. Supor: $S(n) = n^2$.
+\\3. Verificar: 
+\\ \tab 3.1. Passo básico: $P(n) = n^2$. $P(2) = 2^2 = 4$.
+\\ \tab 3.2. Hipótese: $P(k) = k^2$, $ \forall k \geq 2$ e $k \in \Z$.
+\\ \tab 3.3. Mostrar que $P(k+1) = \boxed{(k+1)^2}$.
+\\ \tab \tab 3.3.1. $P(k+1) = P((k+1) - 1) + 2(k+1) - 1$.
+\\ \tab \tab 3.3.2. \tab \tab[0.6cm] $= P(k) + 2k + 2 - 1$.
+\\ \tab \tab 3.3.3. \tab \tab[0.6cm] $= k^2 + 2k + 1$, pela hipótese indutiva.
+\\ \tab \tab 3.3.4. \tab \tab[0.6cm] $= \boxed{(k + 1)^2}$.}
+
+\vskip10mm
+
+\textbf{\textbf{\texttt{B)}} S(1) = 2 \tab S(n) = 2S(n - 1) + 2$^n$ para n $\geq$ 2.\\}
+\textsf{1. Expandir: $S(2) = 2 \cdot S(1) + 2^2 = 2 \cdot (2) + 2^2 = 4 + 4 = 8$. 
+\\ \tab 1.1. \tab[0.37cm] $ S(3) = 2 \cdot S(2) + 2^3 = 2 \cdot (8) + 2^3 = 16 + 8 = 24 $.
+\\ \tab 1.2. \tab[0.37cm] $ S(4) = 2 \cdot S(3) + 2^4 = 2 \cdot (24) + 2^4 = 48 + 16 = 64 $.
+\\ \tab 1.3. \tab[0.37cm] $ S(5) = 2 \cdot S(4) + 2^5 = 2 \cdot (64) + 2^5 = 128 + 32 = 160 $.
+\\2. Supor: $S(n) = 2^n \cdot n$.
+\\3. Verificar: 
+\\ \tab 3.1. Passo básico: $P(n) = 2^n \cdot n$. $ P(2) = 2^2 \cdot (2) = 8 $.
+\\ \tab 3.2. Hipótese: $P(k) = 2^k \cdot k $, $ \forall k \geq 2$ e $k \in \Z$.
+\\ \tab 3.3. Mostrar que $P(k+1) = \boxed{ 2^{k+1} \cdot (k+1) }$.
+\\ \tab \tab 3.3.1. $P(k+1) = 2 \cdot P((k+1)-1) + 2^{k+1}$.
+\\ \tab \tab 3.3.2. \tab \tab[0.6cm] $= 2 \cdot P(k) + 2^{k+1}$.
+\\ \tab \tab 3.3.3. \tab \tab[0.6cm] $= 2 \cdot (2^k \cdot k) + 2^{k+1}$, pela hipótese indutiva.
+\\ \tab \tab 3.3.4. \tab \tab[0.6cm] $= 2^{k+1} \cdot k + 2^{k+1}$.
+\\ \tab \tab 3.3.4. \tab \tab[0.6cm] $= \boxed{2^{k+1} \cdot (k+1)}$.}
+
+
+\vskip10mm
+
+\textbf{\textbf{\texttt{C)}} S(1) = 1 \tab S(n) = 2S(n - 1) + 1 para n $\geq$ 2.\\}
+\textsf{1. Expandir: $S(2) = 2 \cdot S(1) + 1 = 2 \cdot (1) + 1 = 3 = 2^2-1$. 
+\\ \tab 1.1. \tab[0.37cm]  $S(3) = 2 \cdot S(2) + 1 = 2 \cdot (3) + 1 = 7 = 2^3-1$.
+\\ \tab 1.2. \tab[0.37cm]  $S(4) = 2 \cdot S(3) + 1 = 2 \cdot (7) + 1 = 15 = 2^4-1$.
+\\ \tab 1.3. \tab[0.37cm]  $S(5) = 2 \cdot S(4) + 1 = 2 \cdot (15) + 1 = 31 = 2^5-1$.
+\\2. Supor: $S(n) = 2^n-1$.
+\\3. Verificar: 
+\\ \tab 3.1. Passo básico: $P(n) = 2^n-1 = 2^2-1 = 3$.
+\\ \tab 3.2. Hipótese: $P(k) = 2^k-1$, $ \forall k \geq 2$ e $k \in \Z$.
+\\ \tab 3.3. Mostrar que $P(k+1) = \boxed{ 2^{k+1} - 1 }$.
+\\ \tab \tab 3.3.1. $P(k+1) = 2 \cdot P((k+1)-1) + 1$.
+\\ \tab \tab 3.3.2. \tab \tab[0.6cm] $= 2 \cdot P(k) + 1$.
+\\ \tab \tab 3.3.3. \tab \tab[0.6cm] $= 2 \cdot (2^k-1) + 1$, pela hipótese indutiva.
+\\ \tab \tab 3.3.4. \tab \tab[0.6cm] $= 2 \cdot 2^k -2 + 1$.
+\\ \tab \tab 3.3.4. \tab \tab[0.6cm] $= \boxed{2^{k+1} - 1}$.}
+
+
  
  
 \end{flushleft}   
